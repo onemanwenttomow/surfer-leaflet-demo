@@ -3,6 +3,7 @@ import styled from "styled-components";
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet-defaulticon-compatibility";
+import LocationMarker from "./LocationMarker";
 
 const StyledMapContainer = styled(MapContainer)`
   height: 30rem;
@@ -12,7 +13,7 @@ const StyledMapContainer = styled(MapContainer)`
 
 export default function Map({ markers }) {
   return (
-    <StyledMapContainer center={[53.586, 7.133]} zoom={12} scrollWheelZoom>
+    <StyledMapContainer center={[53.586, -7.133]} zoom={12} scrollWheelZoom>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -26,6 +27,8 @@ export default function Map({ markers }) {
           </Popup>
         </Marker>
       ))}
+
+      <LocationMarker />
     </StyledMapContainer>
   );
 }
