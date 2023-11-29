@@ -1,7 +1,10 @@
+import Map from "@/components/Map";
+
 export default function HomePage() {
   return (
     <div>
-      <h1>Hello from Next.js</h1>
+      <h1>Leaflet demo</h1>
+      <Map />
     </div>
   );
 }
